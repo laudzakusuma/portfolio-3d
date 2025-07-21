@@ -9,6 +9,8 @@ import Contact from '../components/Sections/Contact';
 import ScrollIndicator from '../components/UI/ScrollIndicator';
 import CryptoTicker from '../components/UI/CryptoTicker';
 import Web3Connect from '../components/UI/Web3Connect';
+import TerminalCursor from '../components/UI/TerminalCursor';
+import GlitchTransition from '../components/UI/GlitchTransition';
 
 const HomeContainer = styled.div`
   position: relative;
@@ -29,6 +31,8 @@ const CustomCursor = styled(motion.div)`
 const Home = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const [showTransition, setShowTransition] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e) => {

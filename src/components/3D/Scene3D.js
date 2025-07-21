@@ -1,6 +1,7 @@
 import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Sphere, MeshDistortMaterial, Float, Stars } from '@react-three/drei';
+import CodeRain from './CodeRain';
 import * as THREE from 'three';
 
 const FloatingGeometry = ({ position, color, speed = 1 }) => {
@@ -161,6 +162,8 @@ const Scene3D = () => {
         fade
         speed={1}
       />
+
+      <CodeRain />
 
       <FloatingGeometry position={[-2, 1, 0]} color="#00d4ff" speed={1} />
       <FloatingGeometry position={[2, -1, 1]} color="#ff6b35" speed={0.8} />

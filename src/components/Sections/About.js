@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import CodeBlock from '../UI/CodeBlock';// src/components/Sections/About.js
+import React from 'react';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const AboutContainer = styled.section`
   min-height: 100vh;

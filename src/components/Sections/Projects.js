@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
+import HolographicCard from '../UI/HolographicCard';
 
 const ProjectsContainer = styled.section`
   min-height: 100vh;
@@ -183,6 +184,7 @@ const OverlayContent = styled.div`
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
+  const [hoveredCard, setHoveredCard] = useState(null);
 
   const filters = ['All', 'DeFi', 'NFT/Gaming', 'DApps', 'Tools'];
 
@@ -310,62 +312,15 @@ const Projects = () => {
             animate="visible"
             exit="hidden"
           >
-            {filteredProjects.map((project) => (
-              <ProjectCard
+            {filteredProjects.map((project, index) => (
+              <HolographicCard
                 key={project.id}
-                variants={itemVariants}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className="hoverable"
-                layout
-              >
-                <ProjectImage>
-                  <ProjectOverlay
-                    whileHover={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <OverlayContent>
-                      <motion.div
-                        initial={{ scale: 0 }}
-                        whileHover={{ scale: 1 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <h4 style={{ fontSize: '1.2rem', marginBottom: '10px' }}>
-                          {project.title}
-                        </h4>
-                        <p>Click to view details</p>
-                      </motion.div>
-                    </OverlayContent>
-                  </ProjectOverlay>
-                </ProjectImage>
-                
-                <ProjectContent>
-                  <ProjectTitle>{project.title}</ProjectTitle>
-                  <ProjectDescription>{project.description}</ProjectDescription>
-                  
-                  <TechStack>
-                    {project.tech.map((tech) => (
-                      <TechTag key={tech}>{tech}</TechTag>
-                    ))}
-                  </TechStack>
-                  
-                  <ProjectLinks>
-                    <ProjectLink
-                      href={project.github}
-                      className="hoverable"
-                      whileHover={{ scale: 1.1 }}
-                    >
-                      GitHub
-                    </ProjectLink>
-                    <ProjectLink
-                      href={project.demo}
-                      className="hoverable"
-                      whileHover={{ scale: 1.1 }}
-                    >
-                      Live Demo
-                    </ProjectLink>
-                  </ProjectLinks>
-                </ProjectContent>
-              </ProjectCard>
+                project={project}
+                index={index}
+                isHovered={hoveredCard === index}
+                onHover={setHoveredCard}
+                onLeave={() => setHoveredCard(null)}
+              />
             ))}
           </ProjectGrid>
         </AnimatePresence>
