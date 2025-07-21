@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import CodeBlock from '../UI/CodeBlock';
-import React from 'react';
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
 const AboutContainer = styled.section`
   min-height: 100vh;
@@ -214,25 +210,6 @@ const About = () => {
               Since then, I've been building on Ethereum, experimenting with Layer 2 solutions, 
               and contributing to the open-source ecosystem that's reshaping the internet.
             </Description>
-
-            <motion.div variants={itemVariants}>
-              <CodeBlock 
-                filename="MyTokenContract.sol"
-                autoType={true}
-                code={`pragma solidity ^0.8.0;
-
-contract MyToken {
-    mapping(address => uint256) public balances;
-    uint256 public totalSupply;
-    
-    function mint(address to, uint256 amount) external {
-        balances[to] += amount;
-        totalSupply += amount;
-        emit Transfer(address(0), to, amount);
-    }
-}`}
-              />
-            </motion.div>
 
             <SkillsContainer variants={itemVariants}>
               <SkillsTitle>Technical Skills</SkillsTitle>
