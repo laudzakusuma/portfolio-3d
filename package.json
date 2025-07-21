@@ -16,13 +16,15 @@
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.19",
     "three": "^0.178.0",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "workbox-webpack-plugin": "^7.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "vercel --prod"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +45,7 @@
     ]
   },
   "devDependencies": {
-    "@types/three": "^0.178.1"
+    "@types/three": "^0.178.1",
+    "webpack-bundle-analyzer": "^4.10.2"
   }
 }
