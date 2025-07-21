@@ -138,17 +138,17 @@ const CardValue = styled.p`
 
 const About = () => {
   const skills = {
-    "Frontend": ["React", "Next.js", "TypeScript", "Three.js", "Framer Motion", "Styled Components"],
-    "Backend": ["Node.js", "Express", "Python", "MongoDB", "PostgreSQL", "GraphQL"],
-    "Mobile": ["React Native", "Flutter", "Expo", "Firebase"],
-    "Tools & Others": ["Git", "Docker", "AWS", "Figma", "Blender", "WebGL"]
+    "Blockchain": ["Solidity", "Ethereum", "Web3.js", "Ethers.js", "Hardhat", "Truffle"],
+    "Frontend": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Web3 UI/UX", "MetaMask Integration"],
+    "Backend & APIs": ["Node.js", "Express", "GraphQL", "IPFS", "The Graph Protocol", "Moralis"],
+    "DeFi & NFTs": ["OpenZeppelin", "Uniswap", "1inch", "OpenSea API", "ERC-20", "ERC-721", "ERC-1155"]
   };
 
   const stats = [
-    { icon: "🚀", title: "Projects", value: "50+" },
-    { icon: "👥", title: "Clients", value: "30+" },
-    { icon: "⏱️", title: "Experience", value: "3+ Years" },
-    { icon: "🏆", title: "Awards", value: "5" }
+    { icon: "⛓️", title: "Smart Contracts", value: "25+" },
+    { icon: "🚀", title: "DApps Built", value: "15+" },
+    { icon: "💎", title: "Years in Crypto", value: "3+" },
+    { icon: "🌍", title: "Blockchains", value: "5+" }
   ];
 
   const containerVariants = {
@@ -200,15 +200,15 @@ const About = () => {
             </SectionTitle>
             
             <Description variants={itemVariants}>
-              I'm a passionate full-stack developer with a love for creating immersive digital experiences. 
-              With expertise in modern web technologies and 3D graphics, I bring ideas to life through 
-              clean code and stunning visuals.
+              I'm a passionate Web3 developer and blockchain enthusiast who lives and breathes 
+              decentralized technology. From smart contracts to DeFi protocols, I'm constantly 
+              exploring the bleeding edge of what's possible in the crypto space.
             </Description>
             
             <Description variants={itemVariants}>
-              My journey in web development started 3 years ago, and I've been constantly learning 
-              and evolving with the latest technologies. I specialize in React, Three.js, and modern 
-              animation libraries to create engaging user experiences.
+              My journey into Web3 started 3 years ago when I fell down the Bitcoin rabbit hole. 
+              Since then, I've been building on Ethereum, experimenting with Layer 2 solutions, 
+              and contributing to the open-source ecosystem that's reshaping the internet.
             </Description>
 
             <SkillsContainer variants={itemVariants}>

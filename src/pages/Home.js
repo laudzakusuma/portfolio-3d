@@ -7,6 +7,8 @@ import About from '../components/Sections/About';
 import Projects from '../components/Sections/Projects';
 import Contact from '../components/Sections/Contact';
 import ScrollIndicator from '../components/UI/ScrollIndicator';
+import CryptoTicker from '../components/UI/CryptoTicker';
+import Web3Connect from '../components/UI/Web3Connect';
 
 const HomeContainer = styled.div`
   position: relative;

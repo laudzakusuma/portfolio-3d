@@ -285,16 +285,16 @@ const Contact = () => {
   };
 
   const contactItems = [
-    { icon: '📧', title: 'Email', text: 'hello@yourname.com' },
-    { icon: '📱', title: 'Phone', text: '+62 123 456 7890' },
-    { icon: '📍', title: 'Location', text: 'Jakarta, Indonesia' }
+    { icon: '📧', title: 'Email', text: 'web3dev@crypto.com' },
+    { icon: '💬', title: 'Discord', text: 'CryptoBuilder#1337' },
+    { icon: '🌐', title: 'Location', text: 'Building on Ethereum' }
   ];
 
   const socialLinks = [
     { icon: '🐙', href: '#', label: 'GitHub' },
-    { icon: '💼', href: '#', label: 'LinkedIn' },
     { icon: '🐦', href: '#', label: 'Twitter' },
-    { icon: '📷', href: '#', label: 'Instagram' }
+    { icon: '💼', href: '#', label: 'LinkedIn' },
+    { icon: '📺', href: '#', label: 'YouTube' }
   ];
 
   return (
@@ -336,9 +336,9 @@ const Contact = () => {
             </SectionTitle>
             
             <Description variants={itemVariants}>
-              I'm always excited to work on new projects and collaborate with amazing people. 
-              Whether you have a project in mind or just want to chat about technology, 
-              feel free to reach out!
+              Ready to build the future of Web3 together? Whether you have a groundbreaking DeFi idea, 
+              need a custom smart contract, or want to discuss the latest in blockchain technology, 
+              I'm always excited to connect with fellow crypto enthusiasts and innovators.
             </Description>
 
             <ContactInfo variants={itemVariants}>

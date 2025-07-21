@@ -5,43 +5,32 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#00d4ff" />
-    <meta name="description" content="Professional Portfolio - Creative Developer specializing in 3D web experiences, modern React applications, and immersive digital solutions." />
-    
-    <!-- Open Graph / Facebook -->
+    <meta name="description" content="Web3 Developer & Blockchain Enthusiast - Building the decentralized future with smart contracts, DeFi protocols, and cutting-edge blockchain technology." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://yourportfolio.vercel.app/" />
-    <meta property="og:title" content="Your Name - Creative Developer Portfolio" />
-    <meta property="og:description" content="Creative web developer specializing in 3D experiences, React applications, and modern web technologies." />
+    <meta property="og:title" content="Web3 Developer - Blockchain & DeFi Specialist" />
+    <meta property="og:description" content="Passionate Web3 developer specializing in smart contracts, DeFi protocols, NFTs, and decentralized applications on Ethereum." />
     <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
-
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://yourportfolio.vercel.app/" />
-    <meta property="twitter:title" content="Your Name - Creative Developer Portfolio" />
-    <meta property="twitter:description" content="Creative web developer specializing in 3D experiences, React applications, and modern web technologies." />
+    <meta property="twitter:title" content="Web3 Developer - Blockchain & DeFi Specialist" />
+    <meta property="twitter:description" content="Building the decentralized future with smart contracts, DeFi protocols, and cutting-edge blockchain technology." />
     <meta property="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
 
-    <!-- Apple Touch Icon -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    
-    <!-- Manifest -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
-    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Your Name",
-      "jobTitle": "Creative Developer",
-      "description": "Professional web developer specializing in 3D experiences and modern React applications",
+      "jobTitle": "Web3 Developer & Blockchain Enthusiast",
+      "description": "Professional blockchain developer specializing in smart contracts, DeFi protocols, and decentralized applications",
       "url": "https://yourportfolio.vercel.app",
       "sameAs": [
         "https://github.com/yourusername",
@@ -51,10 +40,9 @@
     }
     </script>
     
-    <title>Your Name - Creative Developer Portfolio</title>
+    <title>Web3 Developer - Blockchain & DeFi Specialist Portfolio</title>
     
     <style>
-      /* Critical CSS for initial load */
       * {
         margin: 0;
         padding: 0;
@@ -70,7 +58,6 @@
         overflow-x: hidden;
       }
       
-      /* Initial loading animation */
       #root {
         min-height: 100vh;
       }
@@ -103,7 +90,6 @@
         100% { transform: rotate(360deg); }
       }
       
-      /* Hide loading screen when React loads */
       .loaded .loading-screen {
         opacity: 0;
         pointer-events: none;
@@ -113,7 +99,6 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     
-    <!-- Initial loading screen -->
     <div class="loading-screen" id="initial-loader">
       <div class="loading-spinner"></div>
     </div>
@@ -121,7 +106,6 @@
     <div id="root"></div>
     
     <script>
-      // Hide initial loader when React loads
       window.addEventListener('load', function() {
         setTimeout(function() {
           document.body.classList.add('loaded');

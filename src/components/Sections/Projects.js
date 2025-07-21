@@ -184,60 +184,60 @@ const OverlayContent = styled.div`
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
 
-  const filters = ['All', 'Web Development', '3D/Animation', 'Mobile App'];
+  const filters = ['All', 'DeFi', 'NFT/Gaming', 'DApps', 'Tools'];
 
   const projects = [
     {
       id: 1,
-      title: "3D Portfolio Website",
-      description: "Interactive portfolio website with Three.js animations and responsive design.",
-      category: "Web Development",
-      tech: ["React", "Three.js", "Framer Motion", "Styled Components"],
+      title: "DeFi Yield Aggregator",
+      description: "Smart contract protocol that automatically finds the best yield farming opportunities across multiple DEXs.",
+      category: "DeFi",
+      tech: ["Solidity", "React", "Web3.js", "Compound", "Aave"],
       github: "#",
       demo: "#"
     },
     {
       id: 2,
-      title: "E-commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration and admin dashboard.",
-      category: "Web Development",
-      tech: ["Next.js", "Node.js", "MongoDB", "Stripe"],
+      title: "NFT Marketplace",
+      description: "Full-featured NFT marketplace with lazy minting, royalties, and auction functionality.",
+      category: "NFT/Gaming",
+      tech: ["Solidity", "IPFS", "React", "OpenSea API", "ERC-721"],
       github: "#",
       demo: "#"
     },
     {
       id: 3,
-      title: "3D Product Visualizer",
-      description: "Interactive 3D product showcase with customization options and AR preview.",
-      category: "3D/Animation",
-      tech: ["Three.js", "WebXR", "Blender", "React"],
+      title: "DAO Governance Platform",
+      description: "Decentralized voting platform for DAOs with snapshot integration and multi-sig treasury management.",
+      category: "DApps",
+      tech: ["Solidity", "Snapshot", "Aragon", "Safe", "TypeScript"],
       github: "#",
       demo: "#"
     },
     {
       id: 4,
-      title: "Mobile Banking App",
-      description: "Secure mobile banking application with biometric authentication.",
-      category: "Mobile App",
-      tech: ["React Native", "Firebase", "Redux", "Expo"],
+      title: "Cross-Chain Bridge",
+      description: "Secure bridge protocol for transferring assets between Ethereum and Polygon networks.",
+      category: "DeFi",
+      tech: ["Solidity", "Polygon", "Chainlink", "Graph Protocol"],
       github: "#",
       demo: "#"
     },
     {
       id: 5,
-      title: "Particle Animation System",
-      description: "Advanced particle system with physics simulation and interactive controls.",
-      category: "3D/Animation",
-      tech: ["WebGL", "GLSL", "JavaScript", "Canvas API"],
+      title: "Web3 Analytics Dashboard",
+      description: "Real-time dashboard tracking DeFi positions, NFT portfolio, and yield farming returns.",
+      category: "Tools",
+      tech: ["React", "Moralis", "DeFiPulse API", "Chart.js"],
       github: "#",
       demo: "#"
     },
     {
       id: 6,
-      title: "Real-time Chat App",
-      description: "Real-time messaging application with video calls and file sharing.",
-      category: "Web Development",
-      tech: ["Socket.io", "Express", "React", "WebRTC"],
+      title: "Play-to-Earn Game",
+      description: "Blockchain-based RPG game where players earn tokens through gameplay and own in-game assets as NFTs.",
+      category: "NFT/Gaming",
+      tech: ["Unity", "Solidity", "ERC-1155", "Polygon", "MetaMask"],
       github: "#",
       demo: "#"
     }
