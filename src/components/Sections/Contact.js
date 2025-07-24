@@ -272,9 +272,9 @@ const Contact = () => {
   const [statusMessage, setStatusMessage] = useState({ type: '', text: '' });
 
   // EmailJS Configuration
-  const EMAILJS_SERVICE_ID = 'service_210wqre'; // Replace with your EmailJS service ID
-  const EMAILJS_TEMPLATE_ID = 'template_ho872c7'; // Replace with your EmailJS template ID
-  const EMAILJS_PUBLIC_KEY = 'pg9Bngw0vT3zhIlmH'; // Replace with your EmailJS public key
+  const EMAILJS_SERVICE_ID = 'service_210wqre';
+  const EMAILJS_TEMPLATE_ID = 'template_ho872c7';
+  const EMAILJS_PUBLIC_KEY = 'pg9Bngw0vT3zhIlmH';
 
   const handleChange = (e) => {
     setFormData({
