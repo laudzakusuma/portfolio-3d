@@ -200,17 +200,17 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "NFT Marketplace",
-      description: "Full-featured NFT marketplace with lazy minting, royalties, and auction functionality.",
-      category: "NFT/Gaming",
-      tech: ["Solidity", "IPFS", "React", "OpenSea API", "ERC-721"],
+      title: "NusaX",
+      description: "On Progress...",
+      category: "DApps",
+      tech: ["Solidity", "Hardhat", "React", "CoinGecko API", "JavaScript"],
       github: "#",
       demo: "#"
     },
     {
       id: 3,
-      title: "DAO Governance Platform",
-      description: "Decentralized voting platform for DAOs with snapshot integration and multi-sig treasury management.",
+      title: "DAO Digital Archive",
+      description: "On Progress...",
       category: "DApps",
       tech: ["Solidity", "Snapshot", "Aragon", "Safe", "TypeScript"],
       github: "#",
@@ -219,7 +219,7 @@ const Projects = () => {
     {
       id: 4,
       title: "Cross-Chain Bridge",
-      description: "Secure bridge protocol for transferring assets between Ethereum and Polygon networks.",
+      description: "Coming soon...",
       category: "DeFi",
       tech: ["Solidity", "Polygon", "Chainlink", "Graph Protocol"],
       github: "#",
@@ -228,7 +228,7 @@ const Projects = () => {
     {
       id: 5,
       title: "Web3 Analytics Dashboard",
-      description: "Real-time dashboard tracking DeFi positions, NFT portfolio, and yield farming returns.",
+      description: "Coming soon...",
       category: "Tools",
       tech: ["React", "Moralis", "DeFiPulse API", "Chart.js"],
       github: "#",
@@ -236,10 +236,10 @@ const Projects = () => {
     },
     {
       id: 6,
-      title: "Play-to-Earn Game",
-      description: "Blockchain-based RPG game where players earn tokens through gameplay and own in-game assets as NFTs.",
-      category: "NFT/Gaming",
-      tech: ["Unity", "Solidity", "ERC-1155", "Polygon", "MetaMask"],
+      title: "Warung DAO",
+      description: "Coming soon...",
+      category: "DApps",
+      tech: ["Solidity", "Snapshot", "Aragon", "Safe", "TypeScript"],
       github: "#",
       demo: "#"
     }
