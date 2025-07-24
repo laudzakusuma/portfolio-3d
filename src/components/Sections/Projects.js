@@ -186,7 +186,7 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [hoveredCard, setHoveredCard] = useState(null);
 
-  const filters = ['All', 'DeFi', 'NFT/Gaming', 'DApps', 'Tools'];
+  const filters = ['All', 'DeFi', 'Innovation', 'DApps'];
 
   const projects = [
     {

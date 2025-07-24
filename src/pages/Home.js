@@ -12,7 +12,6 @@ import RealWeb3Connect from '../components/UI/RealWeb3Connect';
 import TerminalCursor from '../components/UI/TerminalCursor';
 import GlitchTransition from '../components/UI/GlitchTransition';
 import SmartContractInteraction from '../components/UI/SmartContractInteraction';
-import BlockchainStats from '../components/UI/BlockchainStats';
 
 const HomeContainer = styled.div`
   position: relative;

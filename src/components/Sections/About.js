@@ -138,16 +138,16 @@ const CardValue = styled.p`
 
 const About = () => {
   const skills = {
-    "Blockchain": ["Solidity", "Ethereum", "Web3.js", "Ethers.js", "Hardhat", "Truffle"],
-    "Frontend": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Web3 UI/UX", "MetaMask Integration"],
-    "Backend & APIs": ["Node.js", "Express", "GraphQL", "IPFS", "The Graph Protocol", "Moralis"],
-    "DeFi & NFTs": ["OpenZeppelin", "Uniswap", "1inch", "OpenSea API", "ERC-20", "ERC-721", "ERC-1155"]
+    "Blockchain": ["Solidity", "Ethereum", "Web3.js", "Ethers.js", "Hardhat"],
+    "Frontend": ["React", "Next.js", "TypeScript", "Web3 UI/UX", "MetaMask Integration"],
+    "Backend & APIs": ["Node.js", "Express"],
+    "DeFi & NFTs": ["OpenZeppelin", "Uniswap", "OpenSea API", "ERC-20"]
   };
 
   const stats = [
     { icon: "⛓️", title: "Smart Contracts", value: "25+" },
-    { icon: "🚀", title: "DApps Built", value: "15+" },
-    { icon: "💎", title: "Years in Crypto", value: "3+" },
+    { icon: "🚀", title: "DApps Built", value: "10+" },
+    { icon: "💎", title: "Years in Crypto", value: "2+" },
     { icon: "🌍", title: "Blockchains", value: "5+" }
   ];
 
@@ -200,13 +200,13 @@ const About = () => {
             </SectionTitle>
             
             <Description variants={itemVariants}>
-              I'm a passionate Web3 developer and blockchain enthusiast who lives and breathes 
+              I'm a passionate Vibe Coder and Web3 enthusiast who lives and breathes 
               decentralized technology. From smart contracts to DeFi protocols, I'm constantly 
               exploring the bleeding edge of what's possible in the crypto space.
             </Description>
             
             <Description variants={itemVariants}>
-              My journey into Web3 started 3 years ago when I fell down the Bitcoin rabbit hole. 
+              My journey into Web3 started 2 years ago when I fell down the Bitcoin rabbit hole. 
               Since then, I've been building on Ethereum, experimenting with Layer 2 solutions, 
               and contributing to the open-source ecosystem that's reshaping the internet.
             </Description>
