@@ -138,17 +138,17 @@ const CardValue = styled.p`
 
 const About = () => {
   const skills = {
-    "Blockchain": ["Solidity", "Ethereum", "Web3.js", "Ethers.js", "Hardhat"],
+    "Blockchain": ["Solidity", "Ethereum", "Web3.js", "Ethers.js", "Hardhat", "Rust"],
     "Frontend": ["React", "Next.js", "TypeScript", "Web3 UI/UX", "MetaMask Integration"],
-    "Backend & APIs": ["Node.js", "Express"],
+    "Backend & APIs": ["Node.js", "Express", "Rust"],
     "DeFi & NFTs": ["OpenZeppelin", "Uniswap", "OpenSea API", "ERC-20"]
   };
 
   const stats = [
-    { icon: "⛓️", title: "Smart Contracts", value: "25+" },
-    { icon: "🚀", title: "DApps Built", value: "10+" },
-    { icon: "💎", title: "Years in Crypto", value: "2+" },
-    { icon: "🌍", title: "Blockchains", value: "5+" }
+    { title: "Smart Contracts", value: "25+" },
+    { title: "DApps Built", value: "10+" },
+    { title: "Years in Crypto", value: "2+" },
+    { title: "Blockchains", value: "5+" }
   ];
 
   const containerVariants = {

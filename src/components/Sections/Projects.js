@@ -191,11 +191,11 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "DeFi Yield Aggregator",
-      description: "Smart contract protocol that automatically finds the best yield farming opportunities across multiple DEXs.",
-      category: "DeFi",
-      tech: ["Solidity", "React", "Web3.js", "Compound", "Aave"],
-      github: "#",
+      title: "TriUnity ",
+      description: 'TriUnity adalah prototype blockchain revolusioner yang diklaim sebagai "The First Blockchain to Defeat the Trilemma" ',
+      category: "Innovation",
+      tech: ["Rust"],
+      github: "https://github.com/laudzakusuma/TriUnity.git",
       demo: "#"
     },
     {

@@ -164,11 +164,11 @@ const Hero = () => {
         animate="visible"
       >
         <Title variants={itemVariants}>
-          <AnimatedText text="Web3 Developer" />
+          <AnimatedText text="L7 Dev" />
         </Title>
         
         <Subtitle variants={itemVariants}>
-          Building the decentralized future with blockchain technology & smart contracts
+          Building the decentralized future.
         </Subtitle>
         
         <motion.div variants={itemVariants}>
