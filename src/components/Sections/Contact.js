@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 const ContactContainer = styled.section`
   min-height: 100vh;
@@ -84,6 +85,12 @@ const ContactText = styled.div`
   
   p {
     color: ${({ theme }) => theme.colors.textSecondary};
+    cursor: pointer;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary};
+    }
   }
 `;
 
@@ -216,6 +223,26 @@ const SubmitButton = styled(motion.button)`
   }
 `;
 
+const StatusMessage = styled(motion.div)`
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 600;
+  
+  &.success {
+    background: rgba(0, 212, 170, 0.1);
+    border: 1px solid rgba(0, 212, 170, 0.3);
+    color: #00d4aa;
+  }
+  
+  &.error {
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    color: #ff6b6b;
+  }
+`;
+
 const BackgroundAnimation = styled(motion.div)`
   position: absolute;
   top: 0;
@@ -234,13 +261,20 @@ const FloatingShape = styled(motion.div)`
 `;
 
 const Contact = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    user_name: '',
+    user_email: '',
     subject: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusMessage, setStatusMessage] = useState({ type: '', text: '' });
+
+  // EmailJS Configuration
+  const EMAILJS_SERVICE_ID = 'service_210wqre'; // Replace with your EmailJS service ID
+  const EMAILJS_TEMPLATE_ID = 'template_ho872c7'; // Replace with your EmailJS template ID
+  const EMAILJS_PUBLIC_KEY = 'pg9Bngw0vT3zhIlmH'; // Replace with your EmailJS public key
 
   const handleChange = (e) => {
     setFormData({
@@ -252,13 +286,79 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      alert('Message sent successfully!');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+    setStatusMessage({ type: '', text: '' });
+
+    try {
+      // Method 1: EmailJS (Recommended for React)
+      if (EMAILJS_SERVICE_ID !== 'YOUR_SERVICE_ID') {
+        const result = await emailjs.sendForm(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          form.current,
+          EMAILJS_PUBLIC_KEY
+        );
+        
+        if (result.status === 200) {
+          setStatusMessage({
+            type: 'success',
+            text: 'Message sent successfully! I\'ll get back to you soon.'
+          });
+          setFormData({ user_name: '', user_email: '', subject: '', message: '' });
+        }
+      } else {
+        // Method 2: Formspree (Fallback)
+        const response = await fetch('https://formspree.io/f/mdkdevkj', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: formData.user_name,
+            email: formData.user_email,
+            subject: formData.subject,
+            message: formData.message,
+            _replyto: formData.user_email,
+            _subject: `Portfolio Contact: ${formData.subject}`,
+          }),
+        });
+
+        if (response.ok) {
+          setStatusMessage({
+            type: 'success',
+            text: 'Message sent successfully! I\'ll get back to you soon.'
+          });
+          setFormData({ user_name: '', user_email: '', subject: '', message: '' });
+        } else {
+          throw new Error('Network response was not ok');
+        }
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setStatusMessage({
+        type: 'error',
+        text: 'Sorry, there was an error sending your message. Please try again or contact me directly at lauja2608@gmail.com'
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 2000);
+      
+      // Clear status message after 5 seconds
+      setTimeout(() => {
+        setStatusMessage({ type: '', text: '' });
+      }, 5000);
+    }
+  };
+
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setStatusMessage({
+        type: 'success',
+        text: 'Email copied to clipboard!'
+      });
+      
+      setTimeout(() => {
+        setStatusMessage({ type: '', text: '' });
+      }, 2000);
+    });
   };
 
   const containerVariants = {
@@ -285,16 +385,47 @@ const Contact = () => {
   };
 
   const contactItems = [
-    { title: 'Email', text: 'lauja2608@gmail.com' },
-    { title: 'Discord', text: 'mr.l777' },
-    { title: 'Location', text: 'Building on Ethereum' }
+    { 
+      title: 'Email', 
+      text: 'lauja2608@gmail.com',
+      icon: '📧',
+      action: () => copyToClipboard('lauja2608@gmail.com')
+    },
+    { 
+      title: 'Discord', 
+      text: 'mr.l777',
+      icon: '💬',
+      action: () => copyToClipboard('mr.l777')
+    },
+    { 
+      title: 'Location', 
+      text: 'Building on Ethereum',
+      icon: '🌍',
+      action: null
+    }
   ];
 
   const socialLinks = [
-    { href: '#', label: 'GitHub' },
-    { href: '#', label: 'Twitter' },
-    { href: '#', label: 'LinkedIn' },
-    { href: '#', label: 'YouTube' }
+    { 
+      href: 'https://github.com/laudzakusuma', 
+      label: 'GitHub',
+      icon: '⚡'
+    },
+    { 
+      href: 'https://twitter.com/yourusername', 
+      label: 'Twitter',
+      icon: '🐦'
+    },
+    { 
+      href: 'https://linkedin.com/in/yourusername', 
+      label: 'LinkedIn',
+      icon: '💼'
+    },
+    { 
+      href: 'https://youtube.com/@yourusername', 
+      label: 'YouTube',
+      icon: '📺'
+    }
   ];
 
   return (
@@ -347,6 +478,8 @@ const Contact = () => {
                   key={item.title}
                   whileHover={{ x: 10 }}
                   className="hoverable"
+                  onClick={item.action}
+                  style={{ cursor: item.action ? 'pointer' : 'default' }}
                 >
                   <ContactIcon>{item.icon}</ContactIcon>
                   <ContactText>
@@ -362,9 +495,12 @@ const Contact = () => {
                 <SocialLink
                   key={link.label}
                   href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.95 }}
                   className="hoverable"
+                  title={link.label}
                 >
                   {link.icon}
                 </SocialLink>
@@ -378,15 +514,15 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <Form onSubmit={handleSubmit}>
+            <Form ref={form} onSubmit={handleSubmit}>
               <InputGroup>
-                <Label htmlFor="name">Name</Label>
+                <Label htmlFor="user_name">Name</Label>
                 <Input
                   type="text"
-                  id="name"
-                  name="name"
+                  id="user_name"
+                  name="user_name"
                   placeholder="Your full name"
-                  value={formData.name}
+                  value={formData.user_name}
                   onChange={handleChange}
                   required
                   whileFocus={{ scale: 1.02 }}
@@ -394,13 +530,13 @@ const Contact = () => {
               </InputGroup>
 
               <InputGroup>
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="user_email">Email</Label>
                 <Input
                   type="email"
-                  id="email"
-                  name="email"
+                  id="user_email"
+                  name="user_email"
                   placeholder="your.email@example.com"
-                  value={formData.email}
+                  value={formData.user_email}
                   onChange={handleChange}
                   required
                   whileFocus={{ scale: 1.02 }}
@@ -434,6 +570,10 @@ const Contact = () => {
                 />
               </InputGroup>
 
+              {/* Hidden fields for EmailJS */}
+              <input type="hidden" name="to_email" value="lauja2608@gmail.com" />
+              <input type="hidden" name="reply_to" value={formData.user_email} />
+
               <SubmitButton
                 type="submit"
                 disabled={isSubmitting}
@@ -443,6 +583,17 @@ const Contact = () => {
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </SubmitButton>
+
+              {statusMessage.text && (
+                <StatusMessage
+                  className={statusMessage.type}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                >
+                  {statusMessage.text}
+                </StatusMessage>
+              )}
             </Form>
           </FormContainer>
         </ContentGrid>
