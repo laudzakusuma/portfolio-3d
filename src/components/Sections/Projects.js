@@ -196,7 +196,7 @@ const Projects = () => {
       category: "Innovation",
       tech: ["Rust"],
       github: "https://github.com/laudzakusuma/TriUnity.git",
-      demo: "https://triunity-ultimate-hhu8ap49u-laudzas-projects.vercel.app"
+      demo: "https://triunity-ultimate-9n3drl5kv-laudzas-projects.vercel.app/"
     },
     {
       id: 2,
