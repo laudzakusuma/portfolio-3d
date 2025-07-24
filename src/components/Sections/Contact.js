@@ -285,16 +285,16 @@ const Contact = () => {
   };
 
   const contactItems = [
-    { icon: '📧', title: 'Email', text: 'web3dev@crypto.com' },
-    { icon: '💬', title: 'Discord', text: 'CryptoBuilder#1337' },
-    { icon: '🌐', title: 'Location', text: 'Building on Ethereum' }
+    { title: 'Email', text: 'lauja2608@gmail.com' },
+    { title: 'Discord', text: 'mr.l777' },
+    { title: 'Location', text: 'Building on Ethereum' }
   ];
 
   const socialLinks = [
-    { icon: '🐙', href: '#', label: 'GitHub' },
-    { icon: '🐦', href: '#', label: 'Twitter' },
-    { icon: '💼', href: '#', label: 'LinkedIn' },
-    { icon: '📺', href: '#', label: 'YouTube' }
+    { href: '#', label: 'GitHub' },
+    { href: '#', label: 'Twitter' },
+    { href: '#', label: 'LinkedIn' },
+    { href: '#', label: 'YouTube' }
   ];
 
   return (
@@ -332,7 +332,7 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <SectionTitle variants={itemVariants}>
-              Let's Work Together
+              Let's Build Together
             </SectionTitle>
             
             <Description variants={itemVariants}>
