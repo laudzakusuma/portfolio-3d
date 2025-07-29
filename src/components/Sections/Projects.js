@@ -201,11 +201,11 @@ const Projects = () => {
     {
       id: 2,
       title: "NusaX",
-      description: "On Progress...",
+      description: "NusaX adalah sebuah inisiatif aset digital terdesentralisasi yang dibangun di atas blockchain SUI. Proyek ini bertujuan untuk mengakselerasi pertumbuhan ekonomi kreatif dan digital di Indonesia dengan menyediakan infrastruktur keuangan yang cepat, efisien, dan berbiaya rendah.",
       category: "DApps",
       tech: ["Solidity", "Hardhat", "React", "CoinGecko API", "JavaScript"],
-      github: "#",
-      demo: "#"
+      github: "https://github.com/laudzakusuma/nusax_coin.git",
+      demo: "https://suiscan.xyz/testnet/object/0xc45ff3849c558734d7eec64fa1dbcc481f2bee0b27b31cdda020a1e2709e73b7/tx-blocks"
     },
     {
       id: 3,
