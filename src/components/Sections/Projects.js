@@ -186,13 +186,13 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [hoveredCard, setHoveredCard] = useState(null);
 
-  const filters = ['All', 'DeFi', 'Innovation', 'DApps'];
+  const filters = ['All', 'AI', 'Innovation', 'DApps'];
 
   const projects = [
     {
       id: 1,
       title: "TriUnity ",
-      description: 'TriUnity adalah prototype blockchain revolusioner yang diklaim sebagai "The First Blockchain to Defeat the Trilemma" ',
+      description: 'Triunity is a next-generation blockchain architecture conceptually designed to holistically solve the long-standing Blockchain Trilemma.',
       category: "Innovation",
       tech: ["Rust"],
       github: "https://github.com/laudzakusuma/TriUnity.git",
@@ -201,44 +201,44 @@ const Projects = () => {
     {
       id: 2,
       title: "NusaX",
-      description: "NusaX adalah sebuah inisiatif aset digital terdesentralisasi yang dibangun di atas blockchain SUI. Proyek ini bertujuan untuk mengakselerasi pertumbuhan ekonomi kreatif dan digital di Indonesia dengan menyediakan infrastruktur keuangan yang cepat, efisien, dan berbiaya rendah.",
+      description: "NusaX (NSX) is a decentralized digital asset designed to accelerate Indonesia's vibrant digital and creative economy.",
       category: "DApps",
-      tech: ["Solidity", "Hardhat", "React", "CoinGecko API", "JavaScript"],
+      tech: ["Solidity", "Hardhat", "CoinGecko API", "JavaScript"],
       github: "https://github.com/laudzakusuma/nusax_coin.git",
       demo: "https://suiscan.xyz/testnet/object/0xc45ff3849c558734d7eec64fa1dbcc481f2bee0b27b31cdda020a1e2709e73b7/tx-blocks"
     },
     {
       id: 3,
-      title: "DAO Digital Archive",
-      description: "On Progress...",
-      category: "DApps",
-      tech: ["Solidity", "Snapshot", "Aragon", "Safe", "TypeScript"],
-      github: "#",
+      title: "LEO",
+      description: "LEO is a voice-based AI assistant inspired by Jarvis from the Iron Man movie.",
+      category: "AI",
+      tech: ["python", "ElevenLabs"],
+      github: "https://github.com/laudzakusuma/LEO.git",
       demo: "#"
     },
     {
       id: 4,
-      title: "Cross-Chain Bridge",
-      description: "Coming soon...",
-      category: "DeFi",
+      title: "NexusHub",
+      description: "Nexus Hub is a decentralized dashboard or control center designed to simplify how users interact with their digital assets on the Polygon network",
+      category: "DApps",
       tech: ["Solidity", "Polygon", "Chainlink", "Graph Protocol"],
-      github: "#",
-      demo: "#"
+      github: "https://github.com/laudzakusuma/polygon-dapp",
+      demo: "https://nexus-five-ruddy.vercel.app/"
     },
     {
       id: 5,
-      title: "Web3 Analytics Dashboard",
-      description: "Coming soon...",
-      category: "Tools",
-      tech: ["React", "Moralis", "DeFiPulse API", "Chart.js"],
-      github: "#",
-      demo: "#"
+      title: "CrowdFunding",
+      description: "A decentralized crowdfunding platform built with React and Solidity on the Sepolia testnet.",
+      category: "DApps",
+      tech: ["Solidity", "Hardhat", "ETH Sepolia", "JavaScript", "MetaMask"],
+      github: "https://github.com/laudzakusuma/web3",
+      demo: "https://client-chi-mocha.vercel.app/"
     },
     {
       id: 6,
-      title: "Warung DAO",
+      title: "F.R.I.D.A.Y",
       description: "Coming soon...",
-      category: "DApps",
+      category: "AI",
       tech: ["Solidity", "Snapshot", "Aragon", "Safe", "TypeScript"],
       github: "#",
       demo: "#"

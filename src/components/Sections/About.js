@@ -200,7 +200,7 @@ const About = () => {
             </SectionTitle>
             
             <Description variants={itemVariants}>
-              I'm a passionate Vibe Coder and Web3 enthusiast who lives and breathes 
+              I'm Laudza, a passionate Vibe Coder, Web3, and AI enthusiast who lives and breathes 
               decentralized technology. From smart contracts to DeFi protocols, I'm constantly 
               exploring the bleeding edge of what's possible in the crypto space.
             </Description>
